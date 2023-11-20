@@ -6,23 +6,53 @@ body {
 .container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    border: 1px solid red;
     background-image: url("/img/relogio.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
     position: relative;
-    height: 400px;
-
+    height: 700px;
+    
+    border: 1px solid red;
 }
 
 .cronometro {
-    border: 5px solid#303030;
-    border-radius: 100%;
+    border: 5px solid#303030; 
+    border-radius: 100%;  
     background-color:black;
     width: 175px;
     height: 180px;
-    margin: 83px 20px 0px 0px; 
+    margin: 233px 20px 0px 0px; 
     padding: 35px 10px 0px 18px;    
+}
+.cronometro h1 {
+    color: rgba(255, 255, 255, 0.755);
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+    margin-bottom: 18px;
+
+    border: 1px solid red;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+
+    border: 1px solid red;
+}
+
+#iniciar {
+    height: 50px;
+    border-radius: 5px 5px 5px 15px;
+}
+
+#pausar {
+    border-radius: 20px;
+}
+
+#parar{
+    border-radius: 5px 5px 15px 7px;
 }
