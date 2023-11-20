@@ -1,18 +1,32 @@
 var sec=0
 var min=0
+var interval
+
+function digito(digit){
+    if(digit < 10){
+        return('0'+digit)
+    }else{
+        return digit
+    }
+}
 
 function start(){
-  //  console.log("Clicou no start") 
-  setInterval(counter, 100)
-  
+    //variavel recebe o valor do setInterval
+    interval= setInterval(counter, 100)
 }
 
 function pause(){
-    console.log("Clicou no pause")
+    //clearInterval é um metodo para cancelar o tempo da chamada setInterval
+    //que esta continda na variavel interval passada como parametro
+    clearInterval(interval)
 }
 
 function stop(){
-    console.log("Clicou no parar")
+    //ira parar de contar, depois irá zerar o contador e mudar o diplay para 00:00
+    clearInterval(interval)
+    sec=0
+    min=0
+    document.getElementById("timer").innerText='00:00'
 }
 
 function counter(){
@@ -24,7 +38,7 @@ function counter(){
     min++
     sec=0
   }
-  document.getElementById("timer").innerText=min+':'+sec
+  document.getElementById("timer").innerText=digito(min)+':'+digito(sec)
 }
 
 
