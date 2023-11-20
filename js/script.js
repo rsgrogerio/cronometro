@@ -16,7 +16,7 @@ function start(){
     if(!isRunning){
         isRunning = true
         //variavel recebe o valor do setInterval
-        interval= setInterval(counter, 100)
+        interval= setInterval(counter, 1000)
     }
 }
 
