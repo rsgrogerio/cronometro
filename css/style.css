@@ -12,8 +12,6 @@ body {
     background-size: auto;
     position: relative;
     height: 700px;
-    
-    border: 1px solid red;
 }
 
 .cronometro {
@@ -31,8 +29,6 @@ body {
     font-size: 60px;
     margin-top: 0px;
     margin-bottom: 18px;
-
-    border: 1px solid red;
 }
 
 .botoes {
@@ -40,19 +36,25 @@ body {
     justify-content: center;
     gap: 12px;
     margin-top: 5px;
-
-    border: 1px solid red;
 }
 
-#iniciar {
+.btn {
     height: 50px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: lightcyan;
+}
+
+#btn-start {
     border-radius: 5px 5px 5px 15px;
 }
 
-#pausar {
+#btn-pause {
     border-radius: 20px;
 }
 
-#parar{
-    border-radius: 5px 5px 15px 7px;
+#btn-stop{
+    border-radius: 5px 5px 20px 7px;
 }
