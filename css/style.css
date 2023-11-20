@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border: 1px solid red;
+    background-image: url("/img/relogio.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    height: 400px;
+
+}
+
+.cronometro {
+    border: 5px solid#303030;
+    border-radius: 100%;
+    background-color:black;
+    width: 175px;
+    height: 180px;
+    margin: 83px 20px 0px 0px; 
+    padding: 35px 10px 0px 18px;    
+}
