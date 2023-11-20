@@ -1,6 +1,7 @@
 var sec=0
 var min=0
 var interval
+var isRunning = false
 
 function digito(digit){
     if(digit < 10){
@@ -11,14 +12,19 @@ function digito(digit){
 }
 
 function start(){
-    //variavel recebe o valor do setInterval
-    interval= setInterval(counter, 100)
+    //verificar se o cronometro já esta em execução
+    if(!isRunning){
+        isRunning = true
+        //variavel recebe o valor do setInterval
+        interval= setInterval(counter, 100)
+    }
 }
 
 function pause(){
     //clearInterval é um metodo para cancelar o tempo da chamada setInterval
     //que esta continda na variavel interval passada como parametro
     clearInterval(interval)
+    isRunning = false
 }
 
 function stop(){
@@ -27,6 +33,7 @@ function stop(){
     sec=0
     min=0
     document.getElementById("timer").innerText='00:00'
+    isRunning = false
 }
 
 function counter(){
